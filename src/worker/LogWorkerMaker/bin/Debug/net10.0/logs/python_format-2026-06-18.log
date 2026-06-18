@@ -1,0 +1,222 @@
+2026-06-18 15:04:27,494 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:04:27,840 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:06:40,947 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:06:41,209 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:07:19,485 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:07:19,794 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:09:53,025 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:09:53,233 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:11:47,513 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:11:47,702 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:11:48,008 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:11:48,008 - Microsoft.Hosting.Lifetime - INFO - Application started. Press Ctrl+C to shut down. 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:11:48,008 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:11:48,037 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38
+2026-06-18 15:11:48,037 - Microsoft.Hosting.Lifetime - INFO - Hosting environment: Development 
+2026-06-18 15:11:48,058 - Microsoft.Hosting.Lifetime - INFO - Content root path: F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker 
+2026-06-18 15:11:48,058 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting started 
+2026-06-18 15:12:57,953 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:12:58,153 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:12:58,314 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:12:58,314 - Microsoft.Hosting.Lifetime - INFO - Application started. Press Ctrl+C to shut down. 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:12:58,314 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38
+2026-06-18 15:12:58,329 - Microsoft.Hosting.Lifetime - INFO - Hosting environment: Development 
+2026-06-18 15:12:58,329 - Microsoft.Hosting.Lifetime - INFO - Content root path: F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker 
+2026-06-18 15:12:58,345 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting started 
+2026-06-18 15:13:11,884 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:13:12,081 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:13:12,269 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:13:12,269 - Microsoft.Hosting.Lifetime - INFO - Application started. Press Ctrl+C to shut down. 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:13:12,269 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:13:14,056 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38
+2026-06-18 15:13:14,056 - Microsoft.Hosting.Lifetime - INFO - Hosting environment: Development 
+2026-06-18 15:13:15,167 - Microsoft.Hosting.Lifetime - INFO - Content root path: F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker 
+2026-06-18 15:13:15,167 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting started 
+2026-06-18 15:14:37,437 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:14:37,642 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:14:37,827 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:14:37,827 - Microsoft.Hosting.Lifetime - INFO - Application started. Press Ctrl+C to shut down. 
+2026-06-18 15:14:37,827 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:14:37,827 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:14:37,829 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:14:37,829 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:14:37,829 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:14:37,829 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:14:37,829 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:14:37,829 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:14:37,829 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:14:37,829 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:14:37,829 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:15:35,995 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38
+2026-06-18 15:15:35,995 - Microsoft.Hosting.Lifetime - INFO - Hosting environment: Development 
+2026-06-18 15:15:36,012 - Microsoft.Hosting.Lifetime - INFO - Content root path: F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker 
+2026-06-18 15:15:36,790 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting started 
+2026-06-18 15:17:45,427 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:17:45,693 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:17:45,879 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:17:45,879 - Microsoft.Hosting.Lifetime - INFO - Application started. Press Ctrl+C to shut down. 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:17:45,879 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:17:47,793 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38
+2026-06-18 15:17:47,793 - Microsoft.Hosting.Lifetime - INFO - Hosting environment: Development 
+2026-06-18 15:17:47,810 - Microsoft.Hosting.Lifetime - INFO - Content root path: F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker 
+2026-06-18 15:17:48,230 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting started 
+2026-06-18 15:17:58,579 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:17:58,776 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:17:58,988 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:17:58,988 - Microsoft.Hosting.Lifetime - INFO - Application started. Press Ctrl+C to shut down. 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:17:58,988 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:17:59,642 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38
+2026-06-18 15:17:59,642 - Microsoft.Hosting.Lifetime - INFO - Hosting environment: Development 
+2026-06-18 15:18:00,642 - Microsoft.Hosting.Lifetime - INFO - Content root path: F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker 
+2026-06-18 15:18:00,642 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting started 
+2026-06-18 15:18:35,931 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:18:36,219 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:18:36,412 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:18:36,412 - Microsoft.Hosting.Lifetime - INFO - Application started. Press Ctrl+C to shut down. 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:18:36,412 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:18:37,686 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38
+2026-06-18 15:18:37,686 - Microsoft.Hosting.Lifetime - INFO - Hosting environment: Development 
+2026-06-18 15:18:37,704 - Microsoft.Hosting.Lifetime - INFO - Content root path: F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker 
+2026-06-18 15:18:38,510 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting started 
+2026-06-18 15:19:36,138 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:19:36,469 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:19:36,670 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:19:36,670 - Microsoft.Hosting.Lifetime - INFO - Application started. Press Ctrl+C to shut down. 
+2026-06-18 15:19:36,670 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:19:36,670 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:19:36,670 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:19:36,670 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:19:36,670 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:19:36,670 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:19:36,670 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:19:36,670 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:19:36,673 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:19:36,673 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:19:36,673 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:19:37,866 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38
+2026-06-18 15:19:37,866 - Microsoft.Hosting.Lifetime - INFO - Hosting environment: Development 
+2026-06-18 15:19:37,884 - Microsoft.Hosting.Lifetime - INFO - Content root path: F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker 
+2026-06-18 15:19:38,581 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting started 
+2026-06-18 15:20:03,011 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:20:03,217 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:20:03,406 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:20:03,406 - Microsoft.Hosting.Lifetime - INFO - Application started. Press Ctrl+C to shut down. 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:20:03,407 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:20:05,629 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38
+2026-06-18 15:20:05,629 - Microsoft.Hosting.Lifetime - INFO - Hosting environment: Development 
+2026-06-18 15:20:05,645 - Microsoft.Hosting.Lifetime - INFO - Content root path: F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker 
+2026-06-18 15:20:08,330 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting started 
+2026-06-18 15:20:44,463 - LogWorkerMaker.Program - DEBUG - Starting Worker Maker Service... 
+2026-06-18 15:20:44,757 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting starting 
+2026-06-18 15:20:44,940 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:20:44,940 - Microsoft.Hosting.Lifetime - INFO - Application started. Press Ctrl+C to shut down. 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:20:44,940 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:20:45,908 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38
+2026-06-18 15:20:45,908 - Microsoft.Hosting.Lifetime - INFO - Hosting environment: Development 
+2026-06-18 15:20:45,926 - Microsoft.Hosting.Lifetime - INFO - Content root path: F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker 
+2026-06-18 15:20:46,444 - Microsoft.Extensions.Hosting.Internal.Host - DEBUG - Hosting started 
+2026-06-18 15:21:13,655 - LogWorkerMaker.Worker - INFO - Log Worker Maker is running ! 
+2026-06-18 15:21:13,655 - LogWorkerMaker.business_layer.NlogFormatGenerator - INFO - Start simulation 
+2026-06-18 15:21:13,655 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 11/10 = 10 
+2026-06-18 15:21:13,655 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 10/9 = 9 
+2026-06-18 15:21:13,655 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 9/8 = 8 
+2026-06-18 15:21:13,655 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 8/7 = 7 
+2026-06-18 15:21:13,655 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 7/6 = 6 
+2026-06-18 15:21:13,655 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 6/5 = 5 
+2026-06-18 15:21:13,655 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 5/4 = 4 
+2026-06-18 15:21:13,655 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 4/3 = 3 
+2026-06-18 15:21:13,655 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 3/2 = 2 
+2026-06-18 15:21:13,657 - LogWorkerMaker.business_layer.NlogFormatGenerator - TRACE - Div Result 2/1 = 2 
+2026-06-18 15:21:16,383 - LogWorkerMaker.business_layer.NlogFormatGenerator - ERROR - Error Example System.DivideByZeroException: Attempted to divide by zero.
+   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\Desarrollo\Repositorios\logs_viewer\src\worker\LogWorkerMaker\business_layer\NlogFormatGenerator.cs:line 38

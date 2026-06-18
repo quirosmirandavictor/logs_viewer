@@ -1,7 +1,9 @@
-﻿using System;
+﻿using LogWorkerMaker.infrastructure;
+using LogWorkerMaker.models;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Microsoft.Extensions.Logging;
 
 namespace LogWorkerMaker.business_layer
 {
@@ -9,13 +11,19 @@ namespace LogWorkerMaker.business_layer
     {
 
         private readonly ILogger<NlogFormatGenerator> _logger;
+        private readonly QueuePublisher _publisher;
+        private readonly LogFileReader _reader;
 
-        public NlogFormatGenerator(ILogger<NlogFormatGenerator> logger)
+        public NlogFormatGenerator(ILogger<NlogFormatGenerator> logger,
+                                   QueuePublisher publisher,
+                                   LogFileReader reader)
         {
             _logger = logger;
+            _publisher = publisher;
+            _reader = reader;
         }
 
-        public void log_simulator()
+        public async void log_simulator()
         {
 
             _logger.LogInformation("Start simulation");
@@ -37,8 +45,51 @@ namespace LogWorkerMaker.business_layer
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error Example");
+
+                await PublishNLogAsync();
+
+                await PublishPythonLogAsync();
+
                 throw;
             }
+        }
+
+        private async Task PublishNLogAsync()
+        {
+            string fileName =
+                $"worker-{DateTime.Now:yyyy-MM-dd}.json";
+
+            LogEvent? lastEvent =
+                _reader.GetLastEvent(fileName);
+
+            if (lastEvent is null)
+                return;
+
+            await _publisher.PublishAsync(new LogQueueMessage
+            {
+                Source = "nlog",
+                Event = lastEvent,
+                PublishedAtUtc = DateTime.UtcNow
+            });
+        }
+
+        private async Task PublishPythonLogAsync()
+        {
+            string fileName =
+                $"python_format-{DateTime.Now:yyyy-MM-dd}.json";
+
+            LogEvent? lastEvent =
+                _reader.GetLastEvent(fileName);
+
+            if (lastEvent is null)
+                return;
+
+            await _publisher.PublishAsync(new LogQueueMessage
+            {
+                Source = "python",
+                Event = lastEvent,
+                PublishedAtUtc = DateTime.UtcNow
+            });
         }
     }
 }

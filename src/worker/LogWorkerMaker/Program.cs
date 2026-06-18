@@ -1,5 +1,6 @@
 using LogWorkerMaker;
 using LogWorkerMaker.business_layer;
+using LogWorkerMaker.infrastructure;
 using NLog;
 using NLog.Extensions.Hosting;
 
@@ -14,6 +15,8 @@ try
     builder.UseNLog();
 
     builder.Services.AddTransient<NlogFormatGenerator>();
+    builder.Services.AddSingleton<QueuePublisher>();
+    builder.Services.AddSingleton<LogFileReader>();
     builder.Services.AddHostedService<Worker>();
 
 
