@@ -1,0 +1,323 @@
+{"timestamp":"2026-06-19 22:04:57.6754","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 22:04:57.8711","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 22:04:58.0570","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 22:04:58.0570","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 22:04:58.1584","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 22:04:58.1855","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 22:04:58.1855","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 22:04:58.1855","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 22:04:58.1950","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 22:04:58.1950","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 22:04:58.1950","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 22:04:58.1950","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 22:04:58.1950","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 22:04:58.2091","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 22:04:58.2091","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 22:04:58.2091","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 22:04:58.2091","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 22:04:58.2091","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 22:04:58.2091","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 22:41:54.1256","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 22:41:54.3784","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 22:41:54.5435","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 22:41:54.5435","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 22:41:54.5435","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 22:41:54.5435","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 22:41:54.5435","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 22:41:54.5535","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 22:41:54.5535","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 22:41:54.5717","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 22:41:54.5717","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 22:41:54.5717","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 22:41:54.5717","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 22:41:54.5878","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 22:41:54.5878","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 22:41:54.5878","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 22:41:54.5878","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 22:41:54.5998","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 22:41:54.5998","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 22:45:19.8818","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 22:45:20.1129","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 22:45:20.2588","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 22:45:20.2588","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 22:45:20.2588","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 22:45:20.2588","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 22:45:20.2588","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 22:45:20.2716","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 22:45:20.2716","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 22:45:20.2716","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 22:45:20.2716","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 22:45:20.2716","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 22:45:20.2716","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 22:45:20.2871","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 22:45:20.2871","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 22:45:20.2871","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 22:45:20.2871","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 22:45:20.2871","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 22:45:20.3034","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 22:49:18.9462","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 22:49:19.1668","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 22:49:19.3160","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 22:49:19.3160","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 22:49:19.3160","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 22:49:19.3230","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 22:49:19.3230","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 22:49:19.3230","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 22:49:19.3230","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 22:49:19.3230","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 22:49:19.3230","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 22:49:19.3230","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 22:49:19.3373","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 22:49:19.3373","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 22:49:19.3373","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 22:49:19.3373","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 22:49:19.3373","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 22:49:19.3504","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 22:49:19.3504","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 22:54:28.8615","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 22:54:29.0816","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 22:54:29.2402","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 22:54:29.2402","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 22:54:29.2402","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 22:54:29.2491","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 22:54:29.2491","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 22:54:29.2491","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 22:54:29.2491","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 22:54:29.2580","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 22:54:29.2580","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 22:54:29.2580","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 22:54:29.2580","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 22:54:29.2580","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 22:54:29.2580","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 22:54:29.2580","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 22:54:29.2765","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 22:54:29.2765","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 22:54:29.2765","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 22:59:21.2604","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 22:59:21.4674","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 22:59:21.6089","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 22:59:21.6089","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 22:59:21.6089","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 22:59:21.6164","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 22:59:21.6164","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 22:59:21.6164","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 22:59:21.6164","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 22:59:21.6164","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 22:59:21.6164","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 22:59:21.6310","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 22:59:21.6310","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 22:59:21.6310","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 22:59:21.6310","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 22:59:21.6310","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 22:59:21.6310","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 22:59:21.6472","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 22:59:21.6472","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:04:07.6527","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:04:07.8625","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:04:08.0190","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:04:08.0190","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:04:08.0222","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:04:08.0222","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:04:08.0222","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:04:08.0222","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:04:08.0222","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:04:08.0222","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:04:08.0371","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:04:08.0371","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:04:08.0371","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:04:08.0371","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:04:08.0371","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:04:08.0532","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:04:08.0532","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:04:08.0532","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:04:08.0532","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:06:40.2187","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:06:40.4219","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:06:40.5580","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:06:40.5580","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:06:40.5580","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:06:40.5580","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:06:40.5580","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:06:40.5580","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:06:40.5704","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:06:40.5704","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:06:40.5704","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:06:40.5704","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:06:40.5704","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:06:40.5845","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:06:40.5845","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:06:40.5845","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:06:40.5845","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:06:40.5845","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:06:40.6012","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:07:26.4643","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:07:26.6849","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:07:26.8202","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:07:26.8202","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:07:26.8202","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:07:26.8202","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:07:26.8202","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:07:26.8202","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:07:26.8363","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:07:26.8363","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:07:26.8363","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:07:26.8363","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:07:26.8363","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:07:26.8363","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:07:26.8497","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:07:26.8497","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:07:26.8497","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:07:26.8497","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:07:26.8497","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:10:29.0246","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:10:29.2798","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:10:29.4335","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:10:29.4335","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:10:29.4335","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:10:29.4335","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:10:29.4452","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:10:29.4452","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:10:29.4452","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:10:29.4452","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:10:29.4452","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:10:29.4452","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:10:29.4588","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:10:29.4588","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:10:29.4588","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:10:29.4588","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:10:29.4588","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:10:29.4747","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:10:29.4747","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:12:12.9783","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:12:13.2333","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:12:13.3961","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:12:13.3961","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:12:13.3961","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:12:13.3961","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:12:13.3961","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:12:13.3961","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:12:13.3961","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:12:13.4116","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:12:13.4116","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:12:13.4116","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:12:13.4116","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:12:13.4116","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:12:13.4116","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:12:13.4295","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:12:13.4295","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:12:13.4295","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:12:13.4295","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:14:14.6448","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:14:14.8508","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:14:14.9911","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:14:14.9911","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:14:14.9943","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:14:14.9943","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:14:14.9943","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:14:14.9943","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:14:14.9943","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:14:14.9943","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:14:15.0073","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:14:15.0073","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:14:15.0073","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:14:15.0073","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:14:15.0073","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:14:15.0214","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:14:15.0214","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:14:15.0214","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:14:15.0214","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:16:31.2693","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:16:31.4870","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:16:31.6660","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:16:31.6660","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:16:31.6660","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:16:31.6660","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:16:31.6660","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:16:31.6660","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:16:31.6775","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:16:31.6775","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:16:31.6775","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:16:31.6775","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:16:31.6775","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:16:31.6775","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:16:31.6938","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:16:31.6938","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:16:31.6938","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:16:31.6938","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:16:31.6938","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:21:45.5650","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:21:45.7596","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:21:45.8932","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:21:45.8932","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:21:45.8932","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:21:45.8932","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:21:45.9040","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:21:45.9040","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:21:45.9040","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:21:45.9040","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:21:45.9040","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:21:45.9136","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:21:45.9136","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:21:45.9136","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:21:45.9136","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:21:45.9136","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:21:45.9297","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:21:45.9297","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:21:45.9297","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:23:13.0039","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:23:13.2063","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:23:13.3430","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:23:13.3430","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:23:13.3430","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:23:13.3496","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:23:13.3496","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:23:13.3496","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:23:13.3496","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:23:13.3496","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:23:13.3496","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:23:13.3496","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:23:13.3496","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:23:13.3666","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:23:13.3666","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:23:13.3666","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:23:13.3666","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:23:13.3666","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:23:13.3807","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:36:01.9014","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:36:02.1050","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:36:02.2427","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:36:02.2427","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:36:02.2427","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:36:02.2427","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:36:02.2427","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:36:02.2427","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:36:02.2554","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:36:02.2554","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:36:02.2554","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:36:02.2554","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:36:02.2554","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:36:02.2554","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:36:02.2554","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:36:02.2711","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:36:02.2711","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:36:02.2711","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:36:02.2711","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}
+{"timestamp":"2026-06-19 23:58:30.7977","level":"Debug","logger":"LogWorkerMaker.Program","message":"Starting Worker Maker Service..."}
+{"timestamp":"2026-06-19 23:58:31.0614","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting starting"}
+{"timestamp":"2026-06-19 23:58:31.2148","level":"Info","logger":"LogWorkerMaker.Worker","message":"Log Worker Maker is running !"}
+{"timestamp":"2026-06-19 23:58:31.2148","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Application started. Press Ctrl+C to shut down."}
+{"timestamp":"2026-06-19 23:58:31.2148","level":"Info","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Start simulation"}
+{"timestamp":"2026-06-19 23:58:31.2148","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 11/10 = 10"}
+{"timestamp":"2026-06-19 23:58:31.2246","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 10/9 = 9"}
+{"timestamp":"2026-06-19 23:58:31.2246","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Hosting environment: Development"}
+{"timestamp":"2026-06-19 23:58:31.2246","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 9/8 = 8"}
+{"timestamp":"2026-06-19 23:58:31.2246","level":"Info","logger":"Microsoft.Hosting.Lifetime","message":"Content root path: F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker"}
+{"timestamp":"2026-06-19 23:58:31.2246","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 8/7 = 7"}
+{"timestamp":"2026-06-19 23:58:31.2246","level":"Debug","logger":"Microsoft.Extensions.Hosting.Internal.Host","message":"Hosting started"}
+{"timestamp":"2026-06-19 23:58:31.2246","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 7/6 = 6"}
+{"timestamp":"2026-06-19 23:58:31.2412","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 6/5 = 5"}
+{"timestamp":"2026-06-19 23:58:31.2412","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 5/4 = 4"}
+{"timestamp":"2026-06-19 23:58:31.2412","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 4/3 = 3"}
+{"timestamp":"2026-06-19 23:58:31.2412","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 3/2 = 2"}
+{"timestamp":"2026-06-19 23:58:31.2412","level":"Trace","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Div Result 2/1 = 2"}
+{"timestamp":"2026-06-19 23:58:31.2557","level":"Error","logger":"LogWorkerMaker.business_layer.NlogFormatGenerator","message":"Error Example","exception":"System.DivideByZeroException: Attempted to divide by zero.\r\n   at LogWorkerMaker.business_layer.NlogFormatGenerator.log_simulator() in F:\\Desarrollo\\Repositorios\\logs_viewer\\src\\worker\\LogWorkerMaker\\business_layer\\NlogFormatGenerator.cs:line 38"}

@@ -1,5 +1,8 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
+using Azure.Data.Tables;
+using Microsoft.Extensions.DependencyInjection;
+using AppFunction.Services;
 
 var host = new HostBuilder()
 
@@ -11,6 +14,14 @@ var host = new HostBuilder()
         config.SetBasePath(Environment.CurrentDirectory)
               .AddJsonFile("local.settings.json", optional: true, reloadOnChange: true)
               .AddEnvironmentVariables();
+    })    .ConfigureServices((context, services) =>
+    {
+        var connectionString = context.Configuration.GetConnectionString("Storage");
+
+        services.AddSingleton(_ =>
+            new TableServiceClient(connectionString));
+
+        services.AddSingleton<ITableStorageService, TableStorageService>();
     })
     .Build();
 

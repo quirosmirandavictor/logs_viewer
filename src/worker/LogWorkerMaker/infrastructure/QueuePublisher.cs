@@ -18,7 +18,10 @@ namespace LogWorkerMaker.infrastructure
 
             _queueClient = new QueueClient(
                 connectionString,
-                "logsqueue");
+                "logsqueue",new QueueClientOptions
+                {
+                    MessageEncoding = QueueMessageEncoding.Base64
+                });
 
             _queueClient.CreateIfNotExists();
         }
