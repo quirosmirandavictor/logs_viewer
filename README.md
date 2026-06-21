@@ -203,7 +203,26 @@ graph TB
 
 # 📂 Solution Structure
 
+```text
+LOGS_VIEWER/
 
+│
+├── src/
+│   ├── worker/
+│       └──LogWorkerMaker/
+│   ├── AppFunction/
+│
+├── docker/
+│   └── docker-compose.fresh.yml
+│   └── docker-compose.yml
+│
+├── docs/
+│   ├── diagrams/
+│   └── images/
+│
+├── README.md
+└── LICENSE
+```
 
 ---
 
