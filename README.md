@@ -22,6 +22,56 @@ This repository was created as part of my journey toward becoming an **Azure Sol
 
 ---
 
+# ⚡ Quick Start
+
+Run the full local pipeline (Azurite + Worker + Function) with Docker.
+
+Persistent mode (recommended for observability history):
+
+```bash
+cd docker
+docker compose up --build -d
+```
+
+Fresh mode (start from zero on each run):
+
+```bash
+cd docker
+docker compose -f docker-compose.yml -f docker-compose.fresh.yml up --build -d --force-recreate
+```
+
+Verify containers are running:
+
+```bash
+docker compose ps
+```
+
+Open Azure Storage Explorer and attach to the local emulator, then check:
+
+* Queue: `logsqueue`
+* Table: `Logs`
+
+Follow runtime logs:
+
+```bash
+docker compose logs -f logworkermaker
+docker compose logs -f appfunction
+```
+
+Stop services:
+
+```bash
+docker compose down
+```
+
+Delete persisted Azurite volume (hard reset):
+
+```bash
+docker compose down -v
+```
+
+---
+
 # 🎯 Objectives
 
 * Demonstrate event-driven architecture.
@@ -241,3 +291,112 @@ Table Storage offers:
 * High performance
 * Excellent scalability
 * Simple querying
+
+---
+
+# 🐳 Local Container Setup and Validation
+
+This section explains the required dependencies and how to run the full pipeline in Docker so you can validate Queue Storage and Table Storage behavior with Azure Storage Explorer.
+
+## Prerequisites
+
+* Docker Desktop (running, Linux containers mode enabled)
+* Docker Compose v2 (included with Docker Desktop)
+* Azure Storage Explorer
+
+Optional for source-level local development (not required to run containers):
+
+* .NET SDK 8 and .NET SDK 10 preview
+
+## Services Started by Docker Compose
+
+The compose file in [docker/docker-compose.yml](docker/docker-compose.yml) starts these containers:
+
+* azurite: local emulator for Blob, Queue, and Table
+* logworkermaker: generates and publishes log events to Queue Storage
+* appfunction: Azure Functions isolated worker that consumes queue messages and writes entities to Table Storage
+
+Message generation cadence in LogWorkerMaker:
+
+* By default, the worker delay is controlled by DelaySeconds in [src/worker/LogWorkerMaker/appsettings.json](src/worker/LogWorkerMaker/appsettings.json).
+* Current default value: 120 seconds.
+* You can override it with the DelaySeconds environment variable in Docker Compose.
+
+Fresh-start override file:
+
+* [docker/docker-compose.fresh.yml](docker/docker-compose.fresh.yml): runs Azurite in temporary in-memory storage (`tmpfs`) so Queue/Table start empty
+
+Exposed ports:
+
+* 10000 Blob endpoint (Azurite)
+* 10001 Queue endpoint (Azurite)
+* 10002 Table endpoint (Azurite)
+* 7071 Function host
+
+## Start the Project in Containers
+
+From the repository root:
+
+```bash
+cd docker
+docker compose up --build -d
+```
+
+Start from zero (fresh Queue/Table without using persisted volume):
+
+```bash
+cd docker
+docker compose -f docker-compose.yml -f docker-compose.fresh.yml up --build -d --force-recreate
+```
+
+Check container status:
+
+```bash
+docker compose ps
+```
+
+Follow logs:
+
+```bash
+docker compose logs -f logworkermaker
+docker compose logs -f appfunction
+```
+
+Stop everything:
+
+```bash
+docker compose down
+```
+
+To also delete Azurite persisted data volume:
+
+```bash
+docker compose down -v
+```
+
+Recommended workflow for your next observability dashboard stage:
+
+* Use persistent mode during normal development to accumulate historical records in table `Logs`.
+* Use fresh mode when you need clean test runs and deterministic validations.
+
+## Validate Queue and Table with Azure Storage Explorer
+
+1. Open Azure Storage Explorer.
+2. Select Add an account.
+3. Select Attach to a local emulator.
+4. Connect using default Azurite local endpoints.
+5. Expand Local and Attached > Storage Accounts > Emulator - Default Ports.
+6. Open Queues and inspect logsqueue.
+7. Open Tables and inspect Logs.
+
+Expected behavior while containers are running:
+
+* logworkermaker continuously publishes messages to logsqueue.
+* appfunction consumes messages from logsqueue.
+* Table Logs is created automatically (if missing) and receives entities.
+* Queue depth may fluctuate or stay low if consumption keeps up with production.
+
+## Troubleshooting
+
+* If docker compose commands fail with Docker API or engine pipe errors, start Docker Desktop first and retry.
+* If you do not see new entities in Logs, check container logs for appfunction and verify Azurite is healthy.

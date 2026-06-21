@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LogWorkerMaker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2105f228bd296ccef3c16e63eaf67e31ac2909c9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d32c5af52ac370c39443612f80cbfdd88708204")]
 [assembly: System.Reflection.AssemblyProductAttribute("LogWorkerMaker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LogWorkerMaker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,6 +9,7 @@ services:
       --queueHost 0.0.0.0
       --tableHost 0.0.0.0
       --skipApiVersionCheck
+      --location /data
 
     ports:
       - "10000:10000"
@@ -17,6 +18,31 @@ services:
 
     volumes:
       - azurite_data:/data
+
+  appfunction:
+    build:
+      context: ../src/AppFunction
+      dockerfile: Dockerfile
+    container_name: appfunction
+    depends_on:
+      - azurite
+    environment:
+      FUNCTIONS_WORKER_RUNTIME: dotnet-isolated
+      AzureWebJobsStorage: DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite:10000/devstoreaccount1;QueueEndpoint=http://azurite:10001/devstoreaccount1;TableEndpoint=http://azurite:10002/devstoreaccount1;
+      ConnectionStrings__Storage: DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite:10000/devstoreaccount1;QueueEndpoint=http://azurite:10001/devstoreaccount1;TableEndpoint=http://azurite:10002/devstoreaccount1;
+      APPLICATIONINSIGHTS_CONNECTION_STRING: InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://localhost/
+    ports:
+      - "7071:80"
+
+  logworkermaker:
+    build:
+      context: ../src/worker/LogWorkerMaker
+      dockerfile: Dockerfile
+    container_name: logworkermaker
+    depends_on:
+      - azurite
+    environment:
+      ConnectionStrings__Storage: DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite:10000/devstoreaccount1;QueueEndpoint=http://azurite:10001/devstoreaccount1;TableEndpoint=http://azurite:10002/devstoreaccount1;
 
 volumes:
   azurite_data:

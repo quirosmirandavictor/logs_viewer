@@ -1,0 +1,11 @@
+services:
+  azurite:
+    command: >
+      azurite
+      --blobHost 0.0.0.0
+      --queueHost 0.0.0.0
+      --tableHost 0.0.0.0
+      --skipApiVersionCheck
+      --location /tmp/azurite
+    tmpfs:
+      - /tmp/azurite

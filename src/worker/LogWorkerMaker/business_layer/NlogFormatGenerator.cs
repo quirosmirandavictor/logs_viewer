@@ -49,8 +49,6 @@ namespace LogWorkerMaker.business_layer
                 await PublishNLogAsync();
 
                 await PublishPythonLogAsync();
-
-                throw;
             }
         }
 
