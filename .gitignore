@@ -1,4 +1,30 @@
-.vscode/tasks.json
-.vscode/settings.json
-.vscode/launch.json
-.vscode/extensions.json
+# Build artifacts
+**/[Bb]in/
+**/[Oo]bj/
+
+# IDE/editor local state
+**/.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Azure Functions local secrets/config
+**/local.settings.json
+
+# Runtime logs and transient files
+**/[Ll]ogs/
+*.log
+*.cache
+*.db
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Keep collaborative VS Code workspace config in source control
+!.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/settings.json
