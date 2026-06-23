@@ -311,6 +311,8 @@ Table Storage offers:
 * Excellent scalability
 * Simple querying
 
+ADR index: [docs/adr/index.md](docs/adr/index.md)
+
 ---
 
 # 🐳 Local Container Setup and Validation

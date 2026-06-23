@@ -99,4 +99,4 @@ Compared to the alternatives evaluated, Azure Queue Storage was preferred over *
 
 - Azure Queue Storage documentation
 - Azure Functions Queue Trigger documentation
-- Related ADR: ADR-0002
+- Related ADR: 002-use-azure-function-trigger.md
