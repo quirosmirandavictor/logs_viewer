@@ -1,0 +1,40 @@
+name: AppFunction CI (dev)
+
+on:
+  push:
+    branches: [dev]
+    paths:
+      - 'src/AppFunction/**'
+      - '.github/workflows/appfunction-dev-ci.yml'
+  pull_request:
+    branches: [dev]
+    paths:
+      - 'src/AppFunction/**'
+      - '.github/workflows/appfunction-dev-ci.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build AppFunction
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: dotnet clean
+        run: dotnet clean AppFunction.csproj
+        working-directory: src/AppFunction
+
+      - name: dotnet restore
+        run: dotnet restore AppFunction.csproj
+        working-directory: src/AppFunction
+
+      - name: dotnet build
+        run: dotnet build AppFunction.csproj --no-restore --configuration Release
+        working-directory: src/AppFunction

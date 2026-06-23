@@ -315,6 +315,28 @@ ADR index: [docs/adr/index.md](docs/adr/index.md)
 
 ---
 
+# 🔁 CI Pipelines (GitHub Actions)
+
+This repository includes separate CI pipelines for each .NET project, both configured for the `dev` branch.
+
+Workflows:
+
+* AppFunction: [.github/workflows/appfunction-dev-ci.yml](.github/workflows/appfunction-dev-ci.yml)
+* LogWorkerMaker: [.github/workflows/logworkermaker-dev-ci.yml](.github/workflows/logworkermaker-dev-ci.yml)
+
+Documentation copies:
+
+* [docs/github-actions/appfunction-dev-ci.yml](docs/github-actions/appfunction-dev-ci.yml)
+* [docs/github-actions/logworkermaker-dev-ci.yml](docs/github-actions/logworkermaker-dev-ci.yml)
+
+Each pipeline runs:
+
+1. `dotnet clean`
+2. `dotnet restore`
+3. `dotnet build`
+
+---
+
 # 🐳 Local Container Setup and Validation
 
 This section explains the required dependencies and how to run the full pipeline in Docker so you can validate Queue Storage and Table Storage behavior with Azure Storage Explorer.

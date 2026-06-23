@@ -1,0 +1,40 @@
+name: LogWorkerMaker CI (dev)
+
+on:
+  push:
+    branches: [dev]
+    paths:
+      - 'src/worker/LogWorkerMaker/**'
+      - '.github/workflows/logworkermaker-dev-ci.yml'
+  pull_request:
+    branches: [dev]
+    paths:
+      - 'src/worker/LogWorkerMaker/**'
+      - '.github/workflows/logworkermaker-dev-ci.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build LogWorkerMaker
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: dotnet clean
+        run: dotnet clean LogWorkerMaker.csproj
+        working-directory: src/worker/LogWorkerMaker
+
+      - name: dotnet restore
+        run: dotnet restore LogWorkerMaker.csproj
+        working-directory: src/worker/LogWorkerMaker
+
+      - name: dotnet build
+        run: dotnet build LogWorkerMaker.csproj --no-restore --configuration Release
+        working-directory: src/worker/LogWorkerMaker
