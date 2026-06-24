@@ -1,4 +1,5 @@
 # Documentation copy of .github/workflows/appfunction-dev-ci.yml
+# This workflow validates AppFunction code with unit and integration tests before build.
 name: AppFunction CI (dev)
 
 on:
@@ -6,17 +7,78 @@ on:
     branches: [dev]
     paths:
       - 'src/AppFunction/**'
+      - 'src/AppFunction.UnitTests/**'
+      - 'src/AppFunction.IntegrationTests/**'
       - '.github/workflows/appfunction-dev-ci.yml'
   pull_request:
     branches: [dev]
     paths:
       - 'src/AppFunction/**'
+      - 'src/AppFunction.UnitTests/**'
+      - 'src/AppFunction.IntegrationTests/**'
       - '.github/workflows/appfunction-dev-ci.yml'
   workflow_dispatch:
 
 jobs:
+  test:
+    name: Test AppFunction
+    runs-on: ubuntu-latest
+
+    # Azurite is required for integration tests against Queue/Table storage APIs.
+    services:
+      azurite:
+        image: mcr.microsoft.com/azure-storage/azurite
+        ports:
+          - 10000:10000
+          - 10001:10001
+          - 10002:10002
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Wait for Azurite endpoints
+        run: |
+          attempt=0
+          while [ $attempt -lt 30 ]; do
+            (echo > /dev/tcp/127.0.0.1/10001) >/dev/null 2>&1 && break
+            attempt=$((attempt+1))
+            sleep 1
+          done
+
+      - name: dotnet restore (AppFunction)
+        run: dotnet restore src/AppFunction/AppFunction.csproj
+
+      - name: dotnet restore (AppFunction.UnitTests)
+        run: dotnet restore src/AppFunction.UnitTests/AppFunction.UnitTests.csproj
+
+      - name: dotnet restore (AppFunction.IntegrationTests)
+        run: dotnet restore src/AppFunction.IntegrationTests/AppFunction.IntegrationTests.csproj
+
+      - name: dotnet test (AppFunction.UnitTests)
+        run: dotnet test src/AppFunction.UnitTests/AppFunction.UnitTests.csproj --no-restore --configuration Release --logger "trx;LogFileName=appfunction-unit.trx" --collect:"XPlat Code Coverage" --results-directory src/AppFunction.UnitTests/TestResults
+
+      - name: dotnet test (AppFunction.IntegrationTests)
+        run: dotnet test src/AppFunction.IntegrationTests/AppFunction.IntegrationTests.csproj --no-restore --configuration Release --logger "trx;LogFileName=appfunction-integration.trx" --collect:"XPlat Code Coverage" --results-directory src/AppFunction.IntegrationTests/TestResults
+
+      # Artifacts are uploaded even when tests fail to ease troubleshooting in PRs.
+      - name: Upload test and coverage artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: appfunction-test-results
+          path: |
+            src/AppFunction.UnitTests/TestResults/**/*
+            src/AppFunction.IntegrationTests/TestResults/**/*
+
   build:
     name: Build AppFunction
+    needs: test
     runs-on: ubuntu-latest
 
     steps:

@@ -5,17 +5,76 @@ on:
     branches: [dev]
     paths:
       - 'src/worker/LogWorkerMaker/**'
+      - 'src/worker/LogWorkerMaker.UnitTests/**'
+      - 'src/worker/LogWorkerMaker.IntegrationTests/**'
       - '.github/workflows/logworkermaker-dev-ci.yml'
   pull_request:
     branches: [dev]
     paths:
       - 'src/worker/LogWorkerMaker/**'
+      - 'src/worker/LogWorkerMaker.UnitTests/**'
+      - 'src/worker/LogWorkerMaker.IntegrationTests/**'
       - '.github/workflows/logworkermaker-dev-ci.yml'
   workflow_dispatch:
 
 jobs:
+  test:
+    name: Test LogWorkerMaker
+    runs-on: ubuntu-latest
+
+    services:
+      azurite:
+        image: mcr.microsoft.com/azure-storage/azurite
+        ports:
+          - 10000:10000
+          - 10001:10001
+          - 10002:10002
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Wait for Azurite endpoints
+        run: |
+          attempt=0
+          while [ $attempt -lt 30 ]; do
+            (echo > /dev/tcp/127.0.0.1/10001) >/dev/null 2>&1 && break
+            attempt=$((attempt+1))
+            sleep 1
+          done
+
+      - name: dotnet restore (LogWorkerMaker)
+        run: dotnet restore src/worker/LogWorkerMaker/LogWorkerMaker.csproj
+
+      - name: dotnet restore (LogWorkerMaker.UnitTests)
+        run: dotnet restore src/worker/LogWorkerMaker.UnitTests/LogWorkerMaker.UnitTests.csproj
+
+      - name: dotnet restore (LogWorkerMaker.IntegrationTests)
+        run: dotnet restore src/worker/LogWorkerMaker.IntegrationTests/LogWorkerMaker.IntegrationTests.csproj
+
+      - name: dotnet test (LogWorkerMaker.UnitTests)
+        run: dotnet test src/worker/LogWorkerMaker.UnitTests/LogWorkerMaker.UnitTests.csproj --no-restore --configuration Release --logger "trx;LogFileName=logworkermaker-unit.trx" --collect:"XPlat Code Coverage" --results-directory src/worker/LogWorkerMaker.UnitTests/TestResults
+
+      - name: dotnet test (LogWorkerMaker.IntegrationTests)
+        run: dotnet test src/worker/LogWorkerMaker.IntegrationTests/LogWorkerMaker.IntegrationTests.csproj --no-restore --configuration Release --logger "trx;LogFileName=logworkermaker-integration.trx" --collect:"XPlat Code Coverage" --results-directory src/worker/LogWorkerMaker.IntegrationTests/TestResults
+
+      - name: Upload test and coverage artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logworkermaker-test-results
+          path: |
+            src/worker/LogWorkerMaker.UnitTests/TestResults/**/*
+            src/worker/LogWorkerMaker.IntegrationTests/TestResults/**/*
+
   build:
     name: Build LogWorkerMaker
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
