@@ -1,10 +1,8 @@
 using Azure.Storage.Queues.Models;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using AppFunction.Models;
 using AppFunction.Services;
+using AppFunction.Services.Interfaces;
 
 namespace AppFunction;
 
@@ -12,11 +10,16 @@ public class LogsQueueFunction
 {
     private readonly ILogger<LogsQueueFunction> _logger;
     private readonly ITableStorageService _storage;
+    private readonly ILogMessageProcessor _messageProcessor;
 
-    public LogsQueueFunction(ILogger<LogsQueueFunction> logger,ITableStorageService storage)
+    public LogsQueueFunction(
+        ILogger<LogsQueueFunction> logger,
+        ITableStorageService storage,
+        ILogMessageProcessor messageProcessor)
     {
         _logger = logger;
         _storage = storage;
+        _messageProcessor = messageProcessor;
     }
 
     /*[Function(nameof(LogsQueueFunction))]
@@ -52,111 +55,10 @@ public class LogsQueueFunction
 
             _logger.LogInformation("[OK] STEP 1: Basic validation completed");
 
-            // Step 2: JSON deserialization
-            _logger.LogInformation("STEP 2: Attempting to deserialize JSON...");
-            LogMessage logMessage;
-            try
+            if (!_messageProcessor.TryBuildEntity(message.MessageText, out var entity) || entity is null)
             {
-                logMessage = JsonSerializer.Deserialize<LogMessage>(
-                    message.MessageText,
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
-
-                _logger.LogInformation("[OK] STEP 2: JSON deserialized successfully");
-            }
-            catch (JsonException jex)
-            {
-                _logger.LogError(
-                    jex,
-                    "[ERROR] STEP 2: JSON deserialization failed. MessageText: {MessageText}",
-                    message.MessageText);
-
                 return;
             }
-
-            if (logMessage == null)
-            {
-                _logger.LogError(
-                    "[ERROR] STEP 2: Deserialization returned null. MessageText: {MessageText}",
-                    message.MessageText);
-
-                return;
-            }
-
-            _logger.LogInformation(
-                "[OK] STEP 2: LogMessage is not null. Source: {Source}",
-                logMessage.Source);
-
-            // Step 3: Required field validation
-            _logger.LogInformation("STEP 3: Validating required fields...");
-
-            if (logMessage.Event == null)
-            {
-                _logger.LogError("[ERROR] STEP 3: LogMessage.Event is null");
-                return;
-            }
-
-            _logger.LogInformation("[OK] STEP 3: Event is valid");
-
-            if (string.IsNullOrEmpty(logMessage.Source))
-            {
-                _logger.LogError("[ERROR] STEP 3: Source is null or empty");
-                return;
-            }
-
-            _logger.LogInformation(
-                "[OK] STEP 3: Source is valid: {Source}",
-                logMessage.Source);
-
-            // Step 4: Map to LogEntity
-            _logger.LogInformation("STEP 4: Mapping to LogEntity...");
-
-            DateTime parsedTimestamp;
-
-            try
-            {
-                _logger.LogInformation(
-                    "Parsing timestamp: {Timestamp}",
-                    logMessage.Event.Timestamp);
-
-                parsedTimestamp = DateTime.Parse(logMessage.Event.Timestamp);
-
-                _logger.LogInformation("[OK] STEP 4: Timestamp parsed successfully");
-            }
-            catch (FormatException fex)
-            {
-                _logger.LogError(
-                    fex,
-                    "[ERROR] STEP 4: Failed to parse timestamp: {Timestamp}",
-                    logMessage.Event.Timestamp);
-
-                return;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(
-                    ex,
-                    "[ERROR] STEP 4: Unexpected error while parsing timestamp");
-
-                return;
-            }
-
-            var entity = new LogEntity
-            {
-                PartitionKey = logMessage.Source,
-                RowKey = Guid.NewGuid().ToString(),
-
-                Source = logMessage.Source,
-                PublishedAtUtc = logMessage.PublishedAtUtc.ToUniversalTime(),
-
-                EventTimestamp = parsedTimestamp.ToUniversalTime(),
-                Level = logMessage.Event.Level ?? "UNKNOWN",
-                Logger = logMessage.Event.Logger ?? "UNKNOWN",
-                Message = logMessage.Event.Message ?? string.Empty,
-                Exception = logMessage.Event.Exception
-            };
 
             _logger.LogInformation(
                 "[OK] STEP 4: LogEntity created. PartitionKey: {PartitionKey}, RowKey: {RowKey}",

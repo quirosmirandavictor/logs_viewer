@@ -1,13 +1,11 @@
 ﻿using Azure.Storage.Queues;
+using LogWorkerMaker.infrastructure.Interfaces;
 using LogWorkerMaker.models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.Json;
 
 namespace LogWorkerMaker.infrastructure
 {
-    public class QueuePublisher
+    public class QueuePublisher : IQueuePublisher
     {
         private readonly QueueClient _queueClient;
 
@@ -16,9 +14,13 @@ namespace LogWorkerMaker.infrastructure
             string connectionString =
                 configuration.GetConnectionString("Storage")!;
 
+            string queueName =
+                configuration["QueueName"] ?? "logsqueue";
+
             _queueClient = new QueueClient(
                 connectionString,
-                "logsqueue",new QueueClientOptions
+                queueName,
+                new QueueClientOptions
                 {
                     MessageEncoding = QueueMessageEncoding.Base64
                 });

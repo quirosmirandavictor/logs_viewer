@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Azure.Data.Tables;
 using Microsoft.Extensions.DependencyInjection;
 using AppFunction.Services;
+using AppFunction.Services.Interfaces;
 
 var host = new HostBuilder()
 
@@ -22,6 +23,7 @@ var host = new HostBuilder()
             new TableServiceClient(connectionString));
 
         services.AddSingleton<ITableStorageService, TableStorageService>();
+        services.AddSingleton<ILogMessageProcessor, LogMessageProcessor>();
     })
     .Build();
 

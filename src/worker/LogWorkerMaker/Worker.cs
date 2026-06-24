@@ -1,14 +1,15 @@
 using LogWorkerMaker.business_layer;
+using LogWorkerMaker.business_layer.Interfaces;
 
 namespace LogWorkerMaker
 {
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-        private readonly NlogFormatGenerator _log_simulator;
+        private readonly ILogSimulator _log_simulator;
         private readonly IConfiguration _configuration;
 
-        public Worker(ILogger<Worker> logger, NlogFormatGenerator procesador, IConfiguration configuration)
+        public Worker(ILogger<Worker> logger, ILogSimulator procesador, IConfiguration configuration)
         {
             _logger = logger;
             _log_simulator = procesador;
@@ -21,7 +22,7 @@ namespace LogWorkerMaker
             {
                 _logger.LogInformation("Log Worker Maker is running !");
 
-                _log_simulator.log_simulator();
+                await _log_simulator.LogSimulatorAsync();
 
                 int delaySeconds = _configuration.GetValue<int?>("DelaySeconds") ?? 120;
 

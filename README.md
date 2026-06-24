@@ -331,9 +331,46 @@ Documentation copies:
 
 Each pipeline runs:
 
-1. `dotnet clean`
-2. `dotnet restore`
-3. `dotnet build`
+1. `dotnet restore`
+2. `dotnet test` (unit tests)
+3. `dotnet test` (integration tests using Azurite)
+4. Upload test and coverage artifacts
+5. `dotnet clean`
+6. `dotnet build`
+
+Integration tests are executed on every push and pull request to `dev`.
+
+## Run Tests Locally
+
+AppFunction tests:
+
+```bash
+dotnet test src/AppFunction.UnitTests/AppFunction.UnitTests.csproj
+dotnet test src/AppFunction.IntegrationTests/AppFunction.IntegrationTests.csproj
+```
+
+LogWorkerMaker tests:
+
+```bash
+dotnet test src/worker/LogWorkerMaker.UnitTests/LogWorkerMaker.UnitTests.csproj
+dotnet test src/worker/LogWorkerMaker.IntegrationTests/LogWorkerMaker.IntegrationTests.csproj
+```
+
+Integration tests require Azurite running on local default ports (`10000`, `10001`, `10002`).
+
+## Coverage for Portfolio Quality
+
+Coverage reporting is relevant for this repository because it is part of an architecture portfolio.
+
+It provides objective evidence that core processing flows are verified, including:
+
+* Queue message parsing and validation
+* Table Storage persistence behavior
+* Worker publishing behavior for different log sources
+
+The CI pipelines collect coverage data for unit and integration test runs and upload it as workflow artifacts.
+
+At this stage, coverage is informative (no minimum gate enforced yet), which helps keep delivery fast while still making quality visible.
 
 ---
 
