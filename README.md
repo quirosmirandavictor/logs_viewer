@@ -208,17 +208,27 @@ LOGS_VIEWER/
 
 │
 ├── src/
-│   ├── worker/
-│       └──LogWorkerMaker/
-│   ├── AppFunction/
+│   ├── AppFunction/                        # Azure Function (queue trigger, table persistence)
+│   ├── AppFunction.UnitTests/              # Unit tests for AppFunction
+│   ├── AppFunction.IntegrationTests/       # Integration tests for AppFunction (Azurite)
+│   │
+│   └── worker/
+│       ├── LogWorkerMaker/                 # Worker service (log reader, queue publisher)
+│       ├── LogWorkerMaker.UnitTests/       # Unit tests for LogWorkerMaker
+│       └── LogWorkerMaker.IntegrationTests/# Integration tests for LogWorkerMaker (Azurite)
 │
 ├── docker/
 │   └── docker-compose.fresh.yml
 │   └── docker-compose.yml
 │
 ├── docs/
+│   ├── adr/                                # Architecture Decision Records
 │   ├── diagrams/
-│   └── images/
+│   ├── github-actions/                     # Documentation copies of CI workflow files
+│   └── nfr/                                # Non-Functional Requirements
+│
+├── .github/
+│   └── workflows/                          # Executable GitHub Actions CI workflows
 │
 ├── README.md
 └── LICENSE
