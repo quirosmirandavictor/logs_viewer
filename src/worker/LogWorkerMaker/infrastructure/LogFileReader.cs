@@ -1,16 +1,26 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
+using LogWorkerMaker.infrastructure.Interfaces;
 
 namespace LogWorkerMaker.infrastructure
 {
-    public class LogFileReader
+    public class LogFileReader : ILogFileReader
     {
+        private readonly string _logsDirectory;
+
+        public LogFileReader()
+            : this(Path.Combine(AppContext.BaseDirectory, "logs"))
+        {
+        }
+
+        public LogFileReader(string logsDirectory)
+        {
+            _logsDirectory = logsDirectory;
+        }
+
         public LogEvent? GetLastEvent(string fileName)
         {
-            string path = Path.Combine(
-                AppContext.BaseDirectory,
-                "logs",
-                fileName);
+            string path = Path.Combine(_logsDirectory, fileName);
 
             if (!File.Exists(path))
                 return null;

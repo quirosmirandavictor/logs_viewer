@@ -1,29 +1,28 @@
 ﻿using LogWorkerMaker.infrastructure;
+using LogWorkerMaker.infrastructure.Interfaces;
 using LogWorkerMaker.models;
+using LogWorkerMaker.business_layer.Interfaces;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LogWorkerMaker.business_layer
 {
-    public class NlogFormatGenerator
+    public class NlogFormatGenerator : ILogSimulator
     {
 
         private readonly ILogger<NlogFormatGenerator> _logger;
-        private readonly QueuePublisher _publisher;
-        private readonly LogFileReader _reader;
+        private readonly IQueuePublisher _publisher;
+        private readonly ILogFileReader _reader;
 
         public NlogFormatGenerator(ILogger<NlogFormatGenerator> logger,
-                                   QueuePublisher publisher,
-                                   LogFileReader reader)
+                                   IQueuePublisher publisher,
+                                   ILogFileReader reader)
         {
             _logger = logger;
             _publisher = publisher;
             _reader = reader;
         }
 
-        public async void log_simulator()
+        public async Task LogSimulatorAsync()
         {
 
             _logger.LogInformation("Start simulation");
