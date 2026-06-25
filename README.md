@@ -7,6 +7,8 @@
 [![Azure Storage](https://img.shields.io/badge/Azure-Storage-0078D4?logo=microsoftazure\&logoColor=white)](https://azure.microsoft.com/products/storage)
 [![Azurite](https://img.shields.io/badge/Azurite-Local%20Storage-blue)](https://learn.microsoft.com/azure/storage/common/storage-use-azurite)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![AppFunction CI](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/appfunction-dev-ci.yml/badge.svg)](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/appfunction-dev-ci.yml)
+[![LogWorkerMaker CI](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/logworkermaker-dev-ci.yml/badge.svg)](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/logworkermaker-dev-ci.yml)
 
 ---
 
