@@ -134,9 +134,6 @@ infra/bicep/
 └── main.parameters.example.json    # Example parameter values
 ```
 
-## Study Guide
-
-For a detailed explanation of each Bicep object, parameters, and Azure commands, see [docs/bicep-estudio-plantilla.pdf](docs/bicep-estudio-plantilla.pdf) (in Spanish).
 
 ## Install Bicep Support (Azure CLI)
 
