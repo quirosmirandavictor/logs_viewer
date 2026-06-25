@@ -5,7 +5,7 @@
 [![.NET](https://img.shields.io/badge/.NET-8-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
 [![Azure Functions](https://img.shields.io/badge/Azure-Functions-0062AD?logo=azure-functions\&logoColor=white)](https://azure.microsoft.com/products/functions)
 [![Azure Storage](https://img.shields.io/badge/Azure-Storage-0078D4?logo=microsoftazure\&logoColor=white)](https://azure.microsoft.com/products/storage)
-[![Azurite](https://img.shields.io/badge/Azurite-Local%20Storage-blue)](https://learn.microsoft.com/azure/storage/common/storage-use-azurite)
+[![Azurite](https://img.shields.io/badge/Azurite-Storage%20Emulator-blue)](https://learn.microsoft.com/azure/storage/common/storage-use-azurite)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![AppFunction CI](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/appfunction-dev-ci.yml/badge.svg)](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/appfunction-dev-ci.yml)
 [![LogWorkerMaker CI](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/logworkermaker-dev-ci.yml/badge.svg)](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/logworkermaker-dev-ci.yml)
@@ -13,6 +13,7 @@
 [![Docs Architecture](https://img.shields.io/badge/Docs-Architecture-0A66C2)](docs/)
 [![Last Commit](https://img.shields.io/github/last-commit/quirosmirandavictor/logs_viewer)](https://github.com/quirosmirandavictor/logs_viewer/commits/dev)
 [![Architecture: Event-Driven](https://img.shields.io/badge/Architecture-Event--Driven-1F8A70)](README.md#-architecture)
+[![IaC: Bicep](https://img.shields.io/badge/IaC-Bicep-0062AD)](infra/)
 
 ---
 
@@ -24,7 +25,7 @@ Event-driven log processing pipeline with Azure Functions, Queue/Table Storage, 
 
 **Topics**
 
-azure-functions, dotnet, dotnet-8, azure-storage, azure-queue-storage, azure-table-storage, event-driven, serverless, docker, azurite, nlog, clean-architecture, integration-tests
+azure-functions, dotnet, dotnet-8, azure-storage, azure-queue-storage, azure-table-storage, event-driven, serverless, docker, azurite, nlog, clean-architecture, integration-tests, bicep, infrastructure-as-code
 
 ---
 
@@ -86,6 +87,81 @@ Delete persisted Azurite volume (hard reset):
 
 ```bash
 docker compose down -v
+```
+
+---
+
+# ☁️ Azure IaC (Bicep)
+
+This repository includes Bicep templates in `infra/bicep/` to provision the minimum Azure foundation for `src/AppFunction`.
+
+## Architecture Pattern: Multi-Scope
+
+The Bicep template follows the **multi-scope pattern** for proper resource organization:
+
+* **`main.bicep`** (subscription scope): Creates the Resource Group and orchestrates the deployment.
+* **`workload.bicep`** (resource group scope): Contains all workload resources.
+
+## Resources Deployed
+
+* Resource Group
+* Storage Account (StorageV2, Standard_LRS)
+* Queue Service + Queue (`logsqueue`)
+* App Service Plan (Consumption Y1)
+* Function App (dotnet-isolated, v4)
+
+> Note: A Consumption Hosting Plan is also created because it is a required dependency for Azure Function App provisioning.
+
+## Table Storage Recommendation
+
+Your current Function creates the `Logs` table on demand (`CreateIfNotExistsAsync`), so **it is valid to keep table creation out of Bicep** for now.
+
+My recommendation by environment:
+
+* Local/dev portfolio scenarios: keep table creation in application code (simple and practical).
+* Pre-prod/prod environments: define the table in IaC as well, to make infrastructure deterministic and fail fast during deployment.
+
+## Why Unit/Integration Test Projects Are Not in Bicep
+
+Test projects are build/test artifacts and are not Azure runtime infrastructure.
+
+## File Structure
+
+```text
+infra/bicep/
+├── main.bicep                      # Entry point (subscription scope)
+├── workload.bicep                  # Module (resource group scope)
+└── main.parameters.example.json    # Example parameter values
+```
+
+## Study Guide
+
+For a detailed explanation of each Bicep object, parameters, and Azure commands, see [docs/bicep-estudio-plantilla.pdf](docs/bicep-estudio-plantilla.pdf) (in Spanish).
+
+## Install Bicep Support (Azure CLI)
+
+```bash
+az bicep install
+```
+
+## Validate Template (when you have an Azure account)
+
+```bash
+az login
+az account set --subscription "<SUBSCRIPTION_ID>"
+az deployment sub validate \
+    --location eastus \
+    --template-file infra/bicep/main.bicep \
+    --parameters @infra/bicep/main.parameters.example.json
+```
+
+## Deploy Template (when ready)
+
+```bash
+az deployment sub create \
+    --location eastus \
+    --template-file infra/bicep/main.bicep \
+    --parameters @infra/bicep/main.parameters.example.json
 ```
 
 ---
@@ -244,6 +320,9 @@ LOGS_VIEWER/
 │   ├── diagrams/
 │   ├── github-actions/                     # Documentation copies of CI workflow files
 │   └── nfr/                                # Non-Functional Requirements
+│
+├── infra/
+│   └── bicep/                              # Azure IaC templates (resource group, storage, queue, function)
 │
 ├── .github/
 │   └── workflows/                          # Executable GitHub Actions CI workflows

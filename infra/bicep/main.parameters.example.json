@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus"
+    },
+    "environmentName": {
+      "value": "dev"
+    },
+    "resourceGroupName": {
+      "value": "rg-logs-viewer-dev"
+    },
+    "storageAccountName": {
+      "value": "stlogsviewerdev01"
+    },
+    "functionAppName": {
+      "value": "func-logs-viewer-dev"
+    },
+    "hostingPlanName": {
+      "value": "asp-logs-viewer-dev"
+    },
+    "queueName": {
+      "value": "logsqueue"
+    }
+  }
+}
