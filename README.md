@@ -9,6 +9,22 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![AppFunction CI](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/appfunction-dev-ci.yml/badge.svg)](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/appfunction-dev-ci.yml)
 [![LogWorkerMaker CI](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/logworkermaker-dev-ci.yml/badge.svg)](https://github.com/quirosmirandavictor/logs_viewer/actions/workflows/logworkermaker-dev-ci.yml)
+[![Release](https://img.shields.io/github/v/tag/quirosmirandavictor/logs_viewer?label=Release&sort=semver)](https://github.com/quirosmirandavictor/logs_viewer/releases)
+[![Docs Architecture](https://img.shields.io/badge/Docs-Architecture-0A66C2)](docs/)
+[![Last Commit](https://img.shields.io/github/last-commit/quirosmirandavictor/logs_viewer)](https://github.com/quirosmirandavictor/logs_viewer/commits/dev)
+[![Architecture: Event-Driven](https://img.shields.io/badge/Architecture-Event--Driven-1F8A70)](README.md#-architecture)
+
+---
+
+# 🧾 GitHub About Metadata
+
+**Description**
+
+Event-driven log processing pipeline with Azure Functions, Queue/Table Storage, and .NET 8, runnable locally with Docker + Azurite.
+
+**Topics**
+
+azure-functions, dotnet, dotnet-8, azure-storage, azure-queue-storage, azure-table-storage, event-driven, serverless, docker, azurite, nlog, clean-architecture, integration-tests
 
 ---
 
