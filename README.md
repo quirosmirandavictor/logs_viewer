@@ -41,6 +41,16 @@ This repository was created as part of my journey toward becoming an **Azure Sol
 
 ---
 
+# 🎬 Demo
+
+GIF showing the full pipeline in action: LogWorkerMaker publishing events to `logsqueue`, the Azure Function consuming them and persisting entities into the `Logs` table, viewed from Azure Storage Explorer.
+
+![Demo](docs/diagrams/media/logs-viewer-demo.gif)
+
+---
+
+---
+
 # ⚡ Quick Start
 
 Run the full local pipeline (Azurite + Worker + Function) with Docker.
@@ -579,6 +589,10 @@ Expected behavior while containers are running:
 * appfunction consumes messages from logsqueue.
 * Table Logs is created automatically (if missing) and receives entities.
 * Queue depth may fluctuate or stay low if consumption keeps up with production.
+
+![Demo](docs/diagrams/media/logs-viewer-demo.gif)
+
+---
 
 ## Troubleshooting
 
