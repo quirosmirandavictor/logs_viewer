@@ -29,6 +29,47 @@ public class TableStorageService : ITableStorageService
         // The table will be created during the first call to SaveAsync.
     }
 
+    public async Task<IReadOnlyList<LogEntity>> GetAllAsync()
+    {
+        try
+        {
+            await _tableClient.CreateIfNotExistsAsync();
+
+            var logs = new List<LogEntity>();
+            var query = _tableClient.QueryAsync<LogEntity>();
+
+            await foreach (var entity in query)
+            {
+                logs.Add(entity);
+            }
+
+            return logs
+                .OrderByDescending(log => log.EventTimestamp)
+                .ThenByDescending(log => log.Timestamp)
+                .ToList();
+        }
+        catch (Azure.RequestFailedException rfe)
+        {
+            _logger.LogError(
+                rfe,
+                "Azure Table Storage error while retrieving logs. Status: {Status}. Message: {Message}",
+                rfe.Status,
+                rfe.Message);
+
+            throw new Exception(
+                $"Failed to retrieve logs from Table Storage (Status: {rfe.Status})",
+                rfe);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Unexpected error while retrieving logs");
+
+            throw new Exception(
+                "Unexpected error while retrieving logs from Table Storage",
+                ex);
+        }
+    }
+
     public async Task SaveAsync(LogEntity entity)
     {
         try
