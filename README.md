@@ -53,7 +53,7 @@ GIF showing the full pipeline in action: LogWorkerMaker publishing events to `lo
 
 # ⚡ Quick Start
 
-Run the full local pipeline (Azurite + Worker + Function) with Docker.
+Run the full local pipeline (Azurite + Worker + Function + React UI) with Docker.
 
 Persistent mode (recommended for observability history):
 
@@ -80,11 +80,19 @@ Open Azure Storage Explorer and attach to the local emulator, then check:
 * Queue: `logsqueue`
 * Table: `Logs`
 
+Open the React UI:
+
+* URL: `http://localhost:5173`
+* Demo credentials (default):
+    * Username: `demo`
+    * Password: `demo123`
+
 Follow runtime logs:
 
 ```bash
 docker compose logs -f logworkermaker
 docker compose logs -f appfunction
+docker compose logs -f web
 ```
 
 Stop services:
@@ -98,6 +106,68 @@ Delete persisted Azurite volume (hard reset):
 ```bash
 docker compose down -v
 ```
+
+---
+
+# 🖥 React UI (Demo Login Stage)
+
+The frontend was initialized in `src/web` for the first UI stage.
+
+This stage includes:
+
+* A React + TypeScript app bootstrapped with Vite.
+* A demo login screen with local/basic authentication.
+* A protected placeholder view after successful login.
+* No backend logs endpoint consumption yet (planned for the next stage).
+
+## Security/Dependency Policy
+
+This repository does **not** use `npm install` for frontend dependency restore.
+
+For reproducible and safer dependency management, the frontend uses:
+
+* `pnpm` via `corepack`
+* Immutable installs with `--frozen-lockfile`
+* Containerized execution through Docker Compose
+
+## Run Frontend with Docker Compose
+
+Before the first frontend build, generate `src/web/pnpm-lock.yaml` once:
+
+```powershell
+pwsh -File src/web/scripts/generate-lockfile.ps1
+```
+
+Then run the local stack:
+
+From the `docker/` directory:
+
+```bash
+docker compose up --build -d
+```
+
+Frontend endpoint:
+
+* `http://localhost:5173`
+
+Stop everything:
+
+```bash
+docker compose down
+```
+
+## Demo Credentials Configuration
+
+The compose service injects these variables into the frontend container:
+
+* `VITE_DEMO_USER`
+* `VITE_DEMO_PASSWORD`
+
+Default values are currently configured in `docker/docker-compose.yml`.
+
+> If Docker is not running, lockfile generation and image builds will fail by design.
+
+---
 
 ---
 
@@ -296,6 +366,8 @@ graph TB
 | Azurite                | Local Azure Storage Emulator |
 | NLog                   | Logging Framework            |
 | Docker                 | Local Infrastructure         |
+| React + Vite + TypeScript | Demo UI Layer            |
+| pnpm + corepack        | Reproducible Frontend Dependencies |
 | Visual Studio 2026     | Development                  |
 | Visual Studio Code     | Development                  |
 | Azure Storage Explorer | Storage Inspection           |
@@ -312,6 +384,7 @@ LOGS_VIEWER/
 │   ├── AppFunction/                        # Azure Function (queue trigger, table persistence)
 │   ├── AppFunction.UnitTests/              # Unit tests for AppFunction
 │   ├── AppFunction.IntegrationTests/       # Integration tests for AppFunction (Azurite)
+│   ├── web/                                # React UI (demo login stage)
 │   │
 │   └── worker/
 │       ├── LogWorkerMaker/                 # Worker service (log reader, queue publisher)
