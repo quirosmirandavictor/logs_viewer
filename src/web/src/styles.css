@@ -1,0 +1,136 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --bg: #f3f7fb;
+  --panel: #ffffff;
+  --panel-alt: #f9fcff;
+  --ink: #1e2530;
+  --ink-subtle: #566273;
+  --accent: #006f8f;
+  --accent-strong: #005f79;
+  --danger: #b00020;
+  --border: #d5e1ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top right, #d9eef4 0%, transparent 52%),
+    radial-gradient(circle at bottom left, #e1ebff 0%, transparent 47%), var(--bg);
+  color: var(--ink);
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  align-content: start;
+  gap: 1.5rem;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero-panel,
+.login-card,
+.protected-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 18px 38px rgba(30, 45, 75, 0.08);
+}
+
+.hero-panel {
+  padding: 1.4rem 1.4rem 1.2rem;
+  background: linear-gradient(140deg, #f8fdff 0%, #f1f9ff 100%);
+}
+
+.hero-panel h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+.hero-panel p,
+.hint,
+.protected-card p {
+  color: var(--ink-subtle);
+}
+
+.login-card,
+.protected-card {
+  padding: 1.4rem;
+}
+
+.login-card h2,
+.protected-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+form {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 0.72rem 0.78rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+  background: var(--panel-alt);
+}
+
+input:focus-visible {
+  border-color: var(--accent);
+  outline: 2px solid color-mix(in srgb, var(--accent) 28%, white);
+}
+
+button {
+  margin-top: 0.5rem;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.72rem 0.95rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background: var(--accent);
+  transition: background 0.15s ease;
+}
+
+button:hover {
+  background: var(--accent-strong);
+}
+
+button.secondary {
+  width: fit-content;
+}
+
+.error-message {
+  margin: 0.2rem 0 0;
+  color: var(--danger);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 1.2rem 0.85rem 2rem;
+  }
+
+  .hero-panel,
+  .login-card,
+  .protected-card {
+    padding: 1.05rem;
+  }
+}
