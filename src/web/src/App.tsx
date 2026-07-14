@@ -1,11 +1,18 @@
 import { FormEvent, useEffect, useState } from "react";
 import { isAuthenticated, login, logout } from "./auth";
+import { appConfig } from "./config";
+import { fetchLogs, type LogRecord } from "./logsService";
+import { MetricCards } from "./MetricCards";
 
 export function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [error, setError] = useState("");
+  const [logs, setLogs] = useState<LogRecord[]>([]);
+  const [logsError, setLogsError] = useState("");
+  const [isLoadingLogs, setIsLoadingLogs] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState("");
 
   useEffect(() => {
     setIsLoggedIn(isAuthenticated());
@@ -37,7 +44,67 @@ export function App() {
     setUsername("");
     setPassword("");
     setError("");
+    setLogs([]);
+    setLogsError("");
+    setIsLoadingLogs(false);
+    setLastUpdated("");
   }
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      return;
+    }
+
+    // Fetch immediately after login so the dashboard starts with real data.
+    let isActive = true;
+
+    async function loadLogs() {
+      try {
+        setIsLoadingLogs(true);
+        setLogsError("");
+
+        const payload = await fetchLogs();
+
+        if (!isActive) {
+          return;
+        }
+
+        setLogs(payload);
+        setLastUpdated(new Date().toLocaleTimeString());
+        console.log("[App] Logs updated in state", {
+          count: payload.length,
+          refreshIntervalMs: appConfig.refreshIntervalMs
+        });
+      } catch (fetchError) {
+        if (!isActive) {
+          return;
+        }
+
+        const message =
+          fetchError instanceof Error
+            ? fetchError.message
+            : "Unexpected error while retrieving logs.";
+
+        setLogsError(message);
+      } finally {
+        if (isActive) {
+          setIsLoadingLogs(false);
+        }
+      }
+    }
+
+    void loadLogs();
+
+    // Keep polling while the protected dashboard is mounted.
+    const timerId = window.setInterval(() => {
+      void loadLogs();
+    }, appConfig.refreshIntervalMs);
+
+    return () => {
+      isActive = false;
+      window.clearInterval(timerId);
+    };
+  }, [isLoggedIn]);
 
   return (
     <main className="page-shell">
@@ -83,8 +150,26 @@ export function App() {
         <section className="protected-card" aria-label="Protected area">
           <h2>Protected Demo Area</h2>
           <p>
-            Login flow is active. API consumption for AppFunction logs will be added in the next stage.
+            Log data is loaded from AppFunction GetLogs and refreshed automatically.
           </p>
+          <p className="hint">Refresh interval: {appConfig.refreshIntervalMs} ms</p>
+
+          {isLoadingLogs && <p className="hint">Loading logs...</p>}
+          {logsError && <p className="error-message">{logsError}</p>}
+
+          <MetricCards logs={logs} />
+
+          <div className="logs-console-preview" aria-label="Logs preview">
+            <h3>Latest Logs ({logs.length})</h3>
+            <p className="hint">Last updated: {lastUpdated || "Not updated yet"}</p>
+
+            {logs.length === 0 ? (
+              <p className="hint">No logs available yet.</p>
+            ) : (
+              <pre>{JSON.stringify(logs, null, 2)}</pre>
+            )}
+          </div>
+
           <button className="secondary" onClick={handleLogout}>
             Sign out
           </button>
