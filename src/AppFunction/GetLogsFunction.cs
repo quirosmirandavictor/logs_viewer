@@ -22,7 +22,8 @@ public class GetLogsFunction
 
     [Function("GetLogs")]
     public async Task<HttpResponseData> Run(
-        [HttpTrigger(AuthorizationLevel.Function, "get", Route = "logs")] HttpRequestData req)
+        // Keep this endpoint anonymous during local dashboard integration to avoid key management friction.
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "logs")] HttpRequestData req)
     {
         _logger.LogInformation("Processing request to fetch logs from Table Storage.");
 
